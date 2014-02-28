@@ -1,6 +1,6 @@
 # Yv-components
 
-Dependency-free JavaScript modules.
+> Dependency-free JavaScript modules.
 
 ## Included components
 
