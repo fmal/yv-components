@@ -1,0 +1,19 @@
+{
+  "name": "yv-components",
+  "version": "0.0.1",
+  "author": {
+    "name": "Filip Malinowski",
+    "email": "crimhead@gmail.com"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-bump": "~0.1.5",
+    "gulp-git": "~0.3.3",
+    "gulp-roro": "0.4.0",
+    "gulp-uglify": "~0.2.1",
+    "gulp-concat": "~2.1.7",
+    "gulp-rename": "~1.1.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-minify-css": "~0.3.0"
+  }
+}

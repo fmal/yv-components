@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Fast Button</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+            body {
+                margin: 0;
+                padding: 1em;
+            }
+
+            #fastButton {
+                background: slategrey;
+                color: white;
+                cursor: pointer;
+                padding: .5em 1em;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <span id="fastButton">High speed button</span>
+        <script src="../src/Yv.Utils.js"></script>
+        <script src="../src/Yv.FastButton.js"></script>
+        <script>
+            var button = Yv.FastButton(
+                document.getElementById('fastButton'),
+                function(e) {
+                    alert('test');
+                }
+            );
+        </script>
+    </body>
+</html>

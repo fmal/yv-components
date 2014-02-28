@@ -1,0 +1,7 @@
+.yv-Toggle {
+    max-height: none;
+}
+.yv-Toggle--constrained {
+    max-height: 20em;
+    overflow: auto !important;
+}
