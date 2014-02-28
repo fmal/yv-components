@@ -60,10 +60,9 @@
             v = 'v' + pkg.version,
             message = 'Release ' + v;
 
-        return gulp.src('./')
-            .pipe(git.commit(message))
-            .pipe(git.tag(v, message))
-            .pipe(git.push('origin', 'master', {args: '--tags'}))
-            .pipe(gulp.dest('./'));
+        gulp.src('./')
+            .pipe(git.commit(message));
+        git.tag(v, message);
+        git.push('origin', 'master', {args: '--tags'});
     });
 }());
