@@ -9,7 +9,7 @@
     "gulp": "~3.5.2",
     "gulp-bump": "~0.1.5",
     "gulp-git": "~0.2.0",
-    "gulp-roro": "0.4.0",
+    "gulp-roro": "0.4.1",
     "gulp-uglify": "~0.2.1",
     "gulp-concat": "~2.1.7",
     "gulp-rename": "~1.1.0",
