@@ -20,7 +20,7 @@
             return target;
         };
 
-        var _elementStyle = doc.DocumentElement.style,
+        var _elementStyle = doc.documentElement.style,
             _features = {
                 classList: !!document.body.classList,
                 addEventListener: !!window.addEventListener,
