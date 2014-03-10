@@ -16,7 +16,8 @@
     var srcFiles = [
             "./src/Yv.Utils.js",
             "./src/Yv.Toggler.js",
-            "./src/Yv.FastButton.js"
+            "./src/Yv.FastButton.js",
+            ".src/Yv.Dropdown.js"
         ],
         fileName = 'Yv',
         cssDir = './css',

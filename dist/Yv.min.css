@@ -1,1 +1,1 @@
-.yv-Toggle{max-height:none}.yv-Toggle--constrained{max-height:20em;overflow:auto!important}
+.yv-Toggle{max-height:none}.yv-Toggle--constrained{max-height:20em;overflow:auto!important}.yv-Dropdown{position:relative}.yv-Dropdown-menu{position:absolute;display:none}.yv-Dropdown--is-open >.yv-Dropdown-menu{display:block}

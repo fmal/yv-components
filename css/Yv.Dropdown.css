@@ -1,0 +1,12 @@
+.yv-Dropdown {
+    position: relative;
+}
+
+.yv-Dropdown-menu {
+    position: absolute;
+    display: none;
+}
+
+.yv-Dropdown--is-open >.yv-Dropdown-menu {
+    display: block;
+}

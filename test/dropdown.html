@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dropdown</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../css/Yv.Dropdown.css"/>
+        <link rel="stylesheet" href="../bower_components/bootstrap-css-only/css/bootstrap.min.css"/>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+            body {
+                margin: 0;
+                padding: 1em;
+            }
+
+            p {
+                margin-top: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="yv-Dropdown btn-group" id="test">
+            <button type="button" class="btn btn-default">Label</button>
+            <button type="button" class="btn btn-default dropdown-toggle yv-Dropdown-menuLink">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle</span>
+            </button>
+            <ul class="yv-Dropdown-menu dropdown-menu">
+                <li><a href="#" class="yv-Dropdown-menuOption">lorem ipsum</a></li>
+                <li><a href="#" class="yv-Dropdown-menuOption">lorem ipsum</a></li>
+                <li><a href="#" class="yv-Dropdown-menuOption">lorem ipsum</a></li>
+                <li><a href="#" class="yv-Dropdown-menuOption">lorem ipsum</a></li>
+            </ul>
+        </div>
+        <p><button id="destroy">destroy</button></p>
+        <script src="../src/Yv.Utils.js"></script>
+        <script src="../src/Yv.Dropdown.js"></script>
+        <script>
+            var dropdown = Yv.Dropdown(document.getElementById('test'));
+
+            Yv.Utils.events.addEvent(
+                document.getElementById('destroy'),
+                'click',
+                function() {
+                    dropdown.destroy();
+                }
+            );
+        </script>
+    </body>
+</html>
