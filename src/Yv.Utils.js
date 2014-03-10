@@ -56,6 +56,17 @@
                 } else {
                     el.className = el.className.replace(new RegExp('(^|\\b)' + name.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
                 }
+            },
+            toggle: function(el, name) {
+                if(_features.classList) {
+                    el.classList.toggle(name);
+                } else {
+                    if (me.klass.has(el, name)) {
+                        me.klass.remove(el, name);
+                    } else {
+                        me.klass.add(el, name);
+                    }
+                }
             }
         });
 
