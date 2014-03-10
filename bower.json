@@ -1,4 +1,7 @@
 {
   "name": "yv-components",
-  "version": "0.0.3"
+  "version": "0.0.3",
+  "devDependencies": {
+    "bootstrap-css-only": "3.0.0"
+  }
 }
