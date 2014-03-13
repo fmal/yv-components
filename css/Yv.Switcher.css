@@ -1,0 +1,29 @@
+.yv-Switcher {
+    display: table;
+    width: 4em;
+    height: 2em;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    position: relative;
+    border-radius: 1em/50%;
+    transition: all .2s ease-in-out;
+}
+
+    .yv-Switcher-handle {
+        height: 2em;
+        width: 2em;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 1px 1px 2px hsla(0, 0%, 0%, .2), -1px 1px 2px hsla(0, 0%, 0%, .1);
+        transition: all .2s ease-in-out;
+    }
+
+.yv-Switcher--on {
+    background-color: #6d6;
+    border-color: #6d6;
+}
+
+.yv-Switcher--on > .yv-Switcher-handle {
+    -webkit-transform: translateX(2em);
+            transform: translateX(2em);
+}

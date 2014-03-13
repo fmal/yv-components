@@ -5,5 +5,7 @@
 ## Included components
 
 * Utilities
-* Toggler
 * FastButton
+* Toggler
+* Dropdown
+* Switcher
