@@ -74,16 +74,48 @@
         me.extend(me.events = {}, {
             addEvent: function(element, eventName, func, capture) {
                 if (_features.addEventListener) {
-                    return element.addEventListener(eventName, func, !!capture);
-                } else if (element.attachEvent) {
-                    return element.attachEvent("on" + eventName, func);
+                    try {
+                        element.addEventListener(eventName, func, !!capture);
+                    } catch (e) {
+                        if (typeof func === 'object' && func.handleEvent) {
+                            element.addEventListener(eventName, function(e) {
+                                func.handleEvent.call(func, e);
+                            }, !!capture);
+                        } else {
+                            throw e;
+                        }
+                    }
+                } else if ('attachEvent' in element) {
+                    if (typeof func === 'object' && func.handleEvent) {
+                        element.attachEvent('on' + eventName, function() {
+                            func.handleEvent.call(func);
+                        });
+                    } else {
+                        element.attachEvent('on' + eventName, func);
+                    }
                 }
             },
             removeEvent: function(element, eventName, func, capture) {
                 if (_features.addEventListener) {
-                    return element.removeEventListener(eventName, func, !!capture);
-                } else if (element.attachEvent) {
-                    return element.detachEvent("on" + eventName, func);
+                    try {
+                        element.removeEventListener(eventName, func, !!capture);
+                    } catch (e) {
+                        if (typeof func === 'object' && func.handleEvent) {
+                            element.removeEventListener(eventName, function (e) {
+                                func.handleEvent.call(func, e);
+                            }, !!capture);
+                        } else {
+                            throw e;
+                        }
+                    }
+                } else if ('attachEvent' in element) {
+                    if (typeof func === 'object' && func.handleEvent) {
+                        element.detachEvent('on' + eventName, function() {
+                            func.handleEvent.call(func);
+                        });
+                    } else {
+                        element.detachEvent('on' + eventName, func);
+                    }
                 }
             },
             prevent: function(e) {
