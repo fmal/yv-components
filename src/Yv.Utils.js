@@ -26,7 +26,8 @@
                 addEventListener: !!window.addEventListener,
                 svg: !!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1"),
                 touchScreen: !!(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch),
-                boxShadow: 'boxShadow' in _elementStyle || ('WebkitBoxShadow' in _elementStyle || 'MozBoxShadow' in _elementStyle)
+                boxShadow: 'boxShadow' in _elementStyle || ('WebkitBoxShadow' in _elementStyle || 'MozBoxShadow' in _elementStyle),
+                createEvent: 'createEvent' in doc
             };
 
         me.hasFeat = function(feature) {
