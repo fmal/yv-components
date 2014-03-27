@@ -9,3 +9,4 @@
 * Toggler
 * Dropdown
 * Switcher
+* Spinner

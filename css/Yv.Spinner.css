@@ -1,0 +1,34 @@
+.yv-Spinner {
+    position: relative;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+}
+
+    .yv-Spinner > span {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border-radius: 100%;
+        -webkit-animation: scaleout 1s infinite ease-in-out;
+                animation: scaleout 1s infinite ease-in-out;
+    }
+
+@-webkit-keyframes scaleout {
+    0% {
+        -webkit-transform: scale(0);
+    } 100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes scaleout {
+    0% {
+        transform: scale(0);
+    } 100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

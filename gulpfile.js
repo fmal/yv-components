@@ -18,7 +18,8 @@
             "./src/Yv.Toggler.js",
             "./src/Yv.FastButton.js",
             ".src/Yv.Dropdown.js",
-            ".src/Yv.Switcher.js"
+            ".src/Yv.Switcher.js",
+            ".src/Yv.Spinner.js",
         ],
         fileName = 'Yv',
         cssDir = './css',

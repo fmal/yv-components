@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Spinner</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../css/Yv.Spinner.css"/>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+            body {
+                margin: 0;
+                padding: 1em;
+                background-color: #333;
+            }
+
+            .btns {
+                margin-top: 4em;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="btns"><button id="on">on</button> <button id="off">off</button></p>
+        <script src="../src/Yv.Utils.js"></script>
+        <script src="../src/Yv.Spinner.js"></script>
+        <script>
+            var spinner = Yv.Spinner({
+                position: 'absolute',
+                offset: '2em',
+                color: '#fff'
+            });
+
+            Yv.Utils.events.addEvent(
+                document.getElementById('off'),
+                'click',
+                function() {
+                    spinner.off();
+                }
+            );
+
+            Yv.Utils.events.addEvent(
+                document.getElementById('on'),
+                'click',
+                function() {
+                    spinner.on();
+                }
+            );
+        </script>
+    </body>
+</html>
